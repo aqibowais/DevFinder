@@ -39,10 +39,12 @@ function getUserDetail(username) {
             </div>
           </div>
           <div class="repos">
+         
             <ul>Repos <br> ${data.public_repos}</ul>
             <ul>Followers <br> ${data.followers}</ul>
             <ul>Following <br> ${data.following}</ul>
-          </div>
+          
+            </div>
           <div class="links">
             <ul><i class="fa-solid fa-location-dot"></i> ${data.location || "No location"} <br><br> <i class="fa-brands fa-twitter"></i> ${data.twitter_username || "No Twitter"}</ul>
             <ul><i class="fa-solid fa-link"></i> <a href="${data.html_url}">${data.html_url}</a> <br><br><i class="fa-solid fa-building"></i> <a href="${data.html_url}">Github</a></ul>

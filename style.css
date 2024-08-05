@@ -36,14 +36,11 @@ body {
     align-items: center;
 }
 .container{
-    width: 80%;
-    height: 70%;
+    border: 5px solid white;
     display: grid;
     place-items: center;
-
 }
 .header{
-    justify-content: start;
     width: 80%;
     margin: 10px 0px;
     font-size:larger;
@@ -63,8 +60,7 @@ body {
 }
 .input{
     
-    width: 94%;
-    height: 100%;
+    /* width: 1000%; */
     background-color:var(--secondary_color);
     padding: 10px 20px;
     border-radius: 10px;
@@ -107,31 +103,35 @@ input{
     width: 80%;
     height: 400px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--secondary_color);
-    margin-top: 50px;
+    margin-top: 30px;
     box-shadow:var(--box-shadow);
-    /* padding: 10px 20px; */
     border-radius: 10px;
-
-
+    flex-wrap: nowrap;
+    text-wrap: wrap;
+    overflow: hidden;
 }
 .user-img {
-    width: 200px;
-    height: 190px;
-    border-radius: 50%;
-    margin: 20px;
+    /* margin: 20px; */
+    height: auto;
+    width: 50%;
     overflow: hidden; 
     display: flex;
     align-items: center; 
     justify-content: center; 
-    background-color: var(--primary_color);
-
+    background-color: transparent;
+    flex-direction: column;
+    padding-bottom: 20%;
 }
 
 .user-img img {
-width: 100%;
-height: 100%;
+width: 50%;
+height: 45%;
 object-fit: cover;
+border-radius: 50%;
+
 }
 .data{
     width: 80%;
@@ -185,16 +185,22 @@ a{
     .user-details{
         display: grid;
         place-items: center;
-        height: 550px;
-        /* margin: 0; */
-        gap: 0px;
+        height: 100%;
+        margin-top: 80px;
+       
     }
     .user-img{
-        width: 150px;
-        height: 145px;
+        margin: 0;
+        padding-bottom: 0px;
     }
+    .user-img img{
+        width: 30%;
+        height: 25%;
+    }
+
     .repos{
         width: 100%;
+        padding: auto;
     }
     body,a,i{
         font-size: medium;
@@ -202,34 +208,38 @@ a{
     .name{
         font-size: 1.5rem;
     }
-    .user-img{
-        margin: 0px;
-    }
+   
 
 }
 @media (max-width:830px) {
-    .container{
-        width: 100%;
-    }
+
     .data{
         justify-content: start;
+    }
+    .search-box{
+        width: 90%;
+    }
+    .header{
+        width: 90%;
+    }
+    input{
+        width: 70%;
+    }
+    .button{
+        height: 100%;
     }
     .user-details{
         width: 90%;
         display: grid;
         place-items: center;
-        height: 550px;
-        /* margin: 0; */
         gap: 0px;
+        padding: 0%;
     }
     .repos{
-        justify-content: start;
+        justify-content: space-around;
         font-size: medium;
     }
-    .user-img{
-        width: 130px;
-        height: 125px;
-    }
+
     
     body,a,i{
         font-size: medium;
@@ -239,5 +249,10 @@ a{
     }
     .user-img{
         margin: 0px;
+        padding-bottom: 0px;
+    }
+    .user-img img{
+        width: 30%;
+        height: 25%;
     }
 }
